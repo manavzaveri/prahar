@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.vercel/
+.wrangler/
+.env*
+*.tsbuildinfo
+__pycache__/
+*.pyc
+work/
+public/solver/
+public/engine.mjs
+public/licenses/

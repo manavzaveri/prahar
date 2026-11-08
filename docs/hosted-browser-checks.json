@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-08T13:19:22.995Z",
+  "url": "https://prahar-orcin.vercel.app/",
+  "checks": 22,
+  "passed": [
+    "Default comparison calculates correct values in the browser",
+    "Readable report downloads with results, complete inputs and scope",
+    "Comparison CSV downloads actual calculated metrics",
+    "Schedule CSV includes all three calculated schedules",
+    "Complete run JSON preserves the input and result snapshot",
+    "Operator refusal locks the original start and recalculates the cost",
+    "Tighter supply exposes the coordination cost",
+    "Infeasible results stay unavailable in both interface and export",
+    "Flat prices show no savings and no misleading cheap-hour shading",
+    "Ample supply reports no added coordination benefit",
+    "Changed inputs block stale exports and a new impossible limit is infeasible",
+    "Passport edits reach the actual calculation and exported snapshot",
+    "Invalid CSV is rejected with a visible explanation",
+    "Valid activity CSV imports constraints with an explicit source declaration",
+    "Profile CSV imports 96 rates while preserving activity assumptions",
+    "Complete JSON scenario imports and solves reproducibly",
+    "Malformed JSON produces an error without overwriting a valid run",
+    "Evidence tab presents check coverage and billing boundaries",
+    "Desktop layout fits the page",
+    "All three mobile sections avoid page-level horizontal overflow",
+    "Tablet overview and evidence layouts fit the page",
+    "No uncaught page errors or failed resource requests during the walkthrough"
+  ],
+  "errors": [],
+  "failedRequests": []
+}

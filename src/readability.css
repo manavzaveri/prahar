@@ -1,0 +1,27 @@
+/* Readable supporting text, including the small-screen comparison. */
+:root { --muted: #5e7159; }
+.site-header nav button,.research-label,.eyebrow,.toolbar-context,.reset-button,
+.section-kicker,.run-meta,.metric>div,.metric>strong small,.metric p,.legend,
+.chart-foot,thead,td small,th>small,.muted,.panel-note,.unit-input label,
+.factory-id,.tariff-editor>label>span>small,.tariff-editor>label>div,
+.import-option small,.source-editor p,.tested-label,.method-list p,
+.boundary-list p,.evidence-source p,.check-grid small,.technical-note,
+.site-footer,.site-footer>div>span,.site-footer small { color: #5e7159; }
+.simulation-banner { color: #506343; }
+.metric p b,.status.good,.lock-button,.file-button,.passed { color: #356747; }
+.status.warning,.status.fail,.lock-button.locked,.dirty-message { color: #79571f; }
+.insight p,.guide ol { color: #526c4c; }
+.insight.warn b,.insight.warn p { color: #79571f; }
+.error-message { color: #8b4c32; }
+.axis-label { fill: #5e7159; font-size: 12px; }
+.chart-note { fill: #56724c; font-size: 11px; }
+.chart-wrap { overflow-x: auto; }
+.chart-wrap>svg { min-width: 900px; }
+.chart-scroll-note { display: none; font-size: 10px; margin-top: 4px; }
+@media(max-width: 1100px) { .chart-scroll-note { display: block; } }
+@media(max-width: 600px) {
+  .metric p,.insight p,.panel-note,.unit-input label,.technical-note,
+  .check-grid small,.site-footer small,.site-footer>p { font-size: 10px; }
+  .brand small { font-size: 8px; }
+}
+@media print { .chart-wrap>svg { min-width: 0; } .chart-scroll-note { display: none; } }
