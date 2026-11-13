@@ -1,0 +1,13 @@
+case,plan,status,gross_energy_kwh,pv_available_kwh,pv_used_kwh,pv_curtailed_kwh,grid_import_kwh,energy_charge_inr,grid_peak_kw,shared_limit_exceedance_slots,full_pv_loss_peak_kw,full_pv_loss_exceedance_slots,assumed_completed_batches,gross_kwh_per_assumed_batch,purchased_electricity_co2_kg,kg_co2_per_assumed_batch
+existing_curtailed_pv,original,simulated_original,1500.0,700.0,200.0,500.0,1300.0,11300.0,200.0,8,200.0,8,5.0,300.0,923.0,184.6
+existing_curtailed_pv,independent,optimal,1500.0,700.0,450.0,250.0,1050.0,8600.0,50.0,0,200.0,8,5.0,300.0,745.5,149.1
+existing_curtailed_pv,coordinated,optimal,1500.0,700.0,450.0,250.0,1050.0,8600.0,50.0,0,140.0,0,5.0,300.0,745.5,149.1
+no_pv_control,original,simulated_original,1500.0,0.0,0.0,0.0,1500.0,12500.0,200.0,8,200.0,8,5.0,300.0,1065.0,213.0
+no_pv_control,independent,optimal,1500.0,0.0,0.0,0.0,1500.0,11300.0,200.0,8,200.0,8,5.0,300.0,1065.0,213.0
+no_pv_control,coordinated,optimal,1500.0,0.0,0.0,0.0,1500.0,11300.0,140.0,0,140.0,0,5.0,300.0,1065.0,213.0
+locked_jobs_control,original,simulated_original,1500.0,700.0,200.0,500.0,1300.0,11300.0,200.0,0,200.0,0,5.0,300.0,923.0,184.6
+locked_jobs_control,independent,optimal,1500.0,700.0,200.0,500.0,1300.0,11300.0,200.0,0,200.0,0,5.0,300.0,923.0,184.6
+locked_jobs_control,coordinated,optimal,1500.0,700.0,200.0,500.0,1300.0,11300.0,200.0,0,200.0,0,5.0,300.0,923.0,184.6
+fully_absorbed_pv_control,original,simulated_original,1500.0,100.0,100.0,0.0,1400.0,11900.0,200.0,8,200.0,8,5.0,300.0,994.0,198.8
+fully_absorbed_pv_control,independent,optimal,1500.0,100.0,100.0,0.0,1400.0,10700.0,200.0,8,200.0,8,5.0,300.0,994.0,198.8
+fully_absorbed_pv_control,coordinated,optimal,1500.0,100.0,100.0,0.0,1400.0,10700.0,140.0,0,140.0,0,5.0,300.0,994.0,198.8

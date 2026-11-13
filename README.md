@@ -93,7 +93,7 @@ pnpm typecheck
 pnpm build
 ```
 
-The 27 engine/IO tests include six-case Python parity, a small independently
+The 28 engine/IO tests include six-case Python parity, a small independently
 enumerated optimisation case, refusal, infeasibility, resource exclusivity,
 energy conservation, input validation, CSV round trips, report escaping and
 solver-timeout handling. Reference fixtures are in `tests/python-parity.json`.
@@ -109,7 +109,40 @@ prototype validation. Python and JavaScript both use HiGHS, so parity is not a
 fully independent solver comparison. See `docs/VALIDATION.md` and
 `docs/DEMO_GUIDE.md` for coverage and a demonstration sequence.
 
-## Scope and next evidence
+## Separate solar scheduling study
+
+We added a reproducible Python study on 13 November 2026. It assumes existing
+onsite PV, no export and owner-retained solar attributes. Both independent
+and shared planning use the same PV information. With the same five assumed
+batches, grid imports fall from 1,300 to 1,050 kWh. Purchased-electricity CO2
+falls from 184.6 to 149.1 kg per assumed batch, or 19.23%, against the original
+plan with the same PV. Gross energy stays at 1,500 kWh. Coordination adds
+zero extra CO2 benefit over independent planning in this example.
+
+This is a synthetic companion analysis. The live browser app remains
+grid-only. The study does not show field savings, whole-factory emissions,
+physical output quality or carbon credits. No-PV and fully-used-PV controls
+show zero carbon improvement. Nine new study tests passed, including a
+small exhaustive comparison. The shared plan now reserves capacity for full
+PV loss. This holds its declared-load peak at 140 kW if PV disappears;
+the independent plan reaches 200 kW.
+
+Read [the assumptions, results and factor source](docs/SOLAR_STUDY.md).
+Complete inputs, outputs and interval balances are in
+[the evidence folder](docs/solar-study/).
+
+```text
+python reference/test_solar_scheduler.py
+python reference/solar_scheduler.py
+```
+
+We also audited 60 seeded small scenarios against separate exhaustive
+calculations, tested the supported size limit and checked a manual alternative.
+Manual staggering matches the default result. That example alone cannot
+justify a software fee. Read [the stress-test review](docs/STRESS_TEST_REVIEW.md)
+for failures, repairs, limitations and the reasons for the product's scope.
+
+## Scope and next field evidence
 
 This single-day model uses 96 fifteen-minute intervals, at most 10 factories
 and 20 activities. It assumes constant activity power, uninterrupted jobs,

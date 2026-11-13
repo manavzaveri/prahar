@@ -50,3 +50,15 @@ test('infeasible exports leave unavailable metrics blank, not zero',()=>{const s
 test('solver time-limit status never becomes a claimed optimal result',()=>{const r=optimize(example(),true,{solve:()=>({Status:'Time limit reached'})});assert.equal(r.status,'not_proven');assert.equal(r.starts,undefined);});
 test('independent post-solve checks reject a corrupted solver schedule',()=>{const solver={solve:()=>({Status:'Optimal',ObjectiveValue:0,Columns:{}})};assert.throws(()=>optimize(example(),true,solver),/Every activity/);});
 test('application and worker use the identical authored model',()=>{assert.equal(fs.readFileSync(new URL('../lib/engine.mjs',import.meta.url),'utf8'),fs.readFileSync(new URL('../public/engine.mjs',import.meta.url),'utf8'));});
+
+test('valid IDs that match object property names survive solving and JSON export',()=>{
+  for(const id of ['__proto__','constructor','toString']){
+    const s=example();s.jobs=s.jobs.slice(0,1);s.jobs[0].id=id;
+    assert.deepEqual(validate(s),[]);
+    const r=optimize(s,true,highs);
+    assert.equal(r.status,'optimal');
+    assert.equal(Object.keys(r.starts).length,1);
+    assert.ok(Number.isInteger(r.starts[id]));
+    assert.equal(JSON.parse(JSON.stringify(r.starts))[id],r.starts[id]);
+  }
+});

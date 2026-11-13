@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-13",
+  "url": "https://prahar-orcin.vercel.app/",
+  "version": "Original deployed core before the pending ID repair",
+  "checks": [
+    {
+      "name": "Zero capacity rejected; stale exports blocked",
+      "passed": true
+    },
+    {
+      "name": "Background demand above supply limit reports infeasible without invented results",
+      "passed": true
+    },
+    {
+      "name": "No movable activities",
+      "passed": true
+    },
+    {
+      "name": "Tighter supply",
+      "passed": true
+    },
+    {
+      "name": "Flat price control",
+      "passed": true
+    },
+    {
+      "name": "Ample supply control",
+      "passed": true
+    },
+    {
+      "name": "Negative power and fractional slot duration rejected",
+      "passed": true,
+      "note": "Verified the validation messages after input updates settled."
+    },
+    {
+      "name": "Supervisor refusal retained and cost recalculated",
+      "passed": true
+    },
+    {
+      "name": "Phone overview has no page-wide overflow",
+      "passed": true,
+      "page": 375,
+      "viewport": 390
+    },
+    {
+      "name": "Phone Inputs & passports has no page-wide overflow",
+      "passed": true,
+      "page": 375,
+      "viewport": 390
+    },
+    {
+      "name": "Phone Evidence & scope has no page-wide overflow",
+      "passed": true,
+      "page": 375,
+      "viewport": 390
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-13",
+  "scope": "Node/WASM engine audit, not a browser or factory safety certification.",
+  "passed_groups": 8,
+  "checks": [
+    {
+      "name": "60 seeded small scenarios against separate exhaustive arithmetic",
+      "scenarios": 60,
+      "solves": 120,
+      "feasible": 58,
+      "infeasible": 62
+    },
+    {
+      "name": "manual staggering matches the default optimum",
+      "starts": {
+        "F1-A1": 36,
+        "F2-A1": 36,
+        "F3-A1": 36,
+        "F4-A1": 44,
+        "F5-A1": 44
+      },
+      "energy_charge_inr": 11300,
+      "peak_kw": 140,
+      "implication": "The default example alone cannot justify a software fee."
+    },
+    {
+      "name": "zero prices preserve workload and do not create savings",
+      "status": "optimal"
+    },
+    {
+      "name": "a full-day job ends exactly at midnight",
+      "status": "optimal"
+    },
+    {
+      "name": "exact capacity passes and one extra declared kW fails when locked"
+    },
+    {
+      "name": "price scaling and factory order do not change the minimum cost"
+    },
+    {
+      "name": "malformed and out-of-scope inputs fail before solving",
+      "mutations": 8
+    },
+    {
+      "name": "supported size boundary: ten factories and twenty activities",
+      "status": "optimal",
+      "elapsed_ms": 2007,
+      "tie_break_proven": true
+    }
+  ],
+  "failures": []
+}
