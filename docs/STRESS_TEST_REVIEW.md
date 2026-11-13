@@ -5,6 +5,10 @@ establish a business or a safe factory deployment. We would continue the
 competition entry with this narrow claim. We would not fund a cluster rollout
 until a site beats the manual alternative at matched output and quality.
 
+The software accepts changed inputs and solves new schedules. That makes it
+a working software prototype. It does not operate factory equipment. We have
+no factory installation, paying customer or proven commercial readiness.
+
 ## What we found and changed
 
 **Manual planning matches the default result.** Start three activities at
@@ -60,8 +64,14 @@ presets, invalid activity inputs, operator refusal and all three phone
 sections. No page-wide overflow appeared at a 390-pixel phone viewport.
 Wide tables retain their own horizontal scroll. The record is
 `stress-test/live-ui-audit.json`. This does not repeat every old browser check
-or certify the pending deployment. Rapid automated input changes needed a
+or certify every browser. Rapid automated input changes needed a
 settled-state check before the validation click.
+
+We then published the ID repair to the same public app. Its evidence page
+shows 28 checks. The deployed engine contains the repair. The solver file
+returns HTTP 200 with the correct WebAssembly type. We also downloaded all
+four report types from the updated app. Their JSON, HTML and CSV contents
+match the default INR 11,300 charge, 140 kW peak and 1,500 kWh consumption.
 
 ## Results that survive the tests
 
